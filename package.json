@@ -1,0 +1,17 @@
+{
+  "name": "mc_status_bridge",
+  "version": "1.0.0",
+  "description": "Minecraft Status to REST",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthias Rosenthal",
+  "license": "GPL-3.0-or-later"
+}
