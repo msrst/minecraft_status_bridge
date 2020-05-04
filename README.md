@@ -44,6 +44,20 @@ minecraft_server_bridge is a nodejs server which allows to query this as JSON fr
 The bridge can be used, for example, to input the data to another tool like [huginn](https://github.com/huginn/huginn/).  
 Another use case would be to display the current status on your website.
 
+## Setup
+
+First, nodejs and npm have to be installed. I tested it with node-v12.14.1 on Ubuntu and node-v12.16.3-linux-armv6l on Raspberry Pi. The current nodejs apt version on Debian 10 is 10.19.0 which also works (I did not use Promises or any other new feature).
+
+`git clone https://github.com/msrst/minecraft_status_bridge`  
+`npm install`  
+Run with `node .`
+
+### Setup with Docker
+
+To use the docker image:  
+`docker run -p 4100:4100 -d msrst/minecraft_status_bridge`  
+This also works for raspberry pi, because I also built it for armv7.
+
 ## REST Endpoint
 
 `http://localhost:4100/?host=<host>&port=<port>`
