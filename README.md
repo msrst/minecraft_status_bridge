@@ -58,6 +58,19 @@ To use the docker image:
 `docker run -p 4100:4100 -d msrst/minecraft_status_bridge`  
 This also works for raspberry pi, because I also built it for armv7.
 
+### Creating the docker image by yourself
+
+This should usually not be needed, because one can pull the image from docker hub as shown above. But if required, the procedure is as follows: Firstly, enable the experimental mode (for buildx) by adding the json key:value pair `"experimental": "enabled"` to  ~/.docker/config.json and `"experimental": true` to /etc/docker/daemon.json (this might be changed in the future, then build can be used instead of buildx).
+
+Then, run the following commands:
+
+```bash
+docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+docker buildx create --name mymulti --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6,linux/386
+docker buildx use mymulti
+docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t msrst/minecraft_status_bridge .
+```
+
 ## REST Endpoint
 
 `http://localhost:4100/?host=<host>&port=<port>`

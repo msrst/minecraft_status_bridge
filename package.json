@@ -1,13 +1,13 @@
 {
   "name": "mc_status_bridge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minecraft Status to REST",
   "main": "index.js",
   "dependencies": {
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^7.27.0"
   },
   "repository": "https://github.com/msrst/minecraft_status_bridge",
   "scripts": {
