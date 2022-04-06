@@ -4,10 +4,10 @@
   "description": "Minecraft Status to REST",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "devDependencies": {
-    "eslint": "^7.27.0"
+    "eslint": "^8.6.0"
   },
   "repository": "https://github.com/msrst/minecraft_status_bridge",
   "scripts": {
